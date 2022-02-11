@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: ponkumarpandianprojecthtmlwebsite 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ponkumarpandianprojecthtmlwebsite
+  template:
+    metadata:
+      labels:
+        app: ponkumarpandianprojecthtmlwebsite 
+    spec:
+      containers:
+        - name: ponkumarpandianprojecthtmlwebsite 
+          image: ponacr.azurecr.io/ponkumarpandianprojecthtmlwebsite
+          ports:
+          - containerPort: 80
